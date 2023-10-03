@@ -8,6 +8,11 @@ module.exports = {
           secondary: '',
           tertiary: ''
         },
+        modal: {
+          small: '300px',
+          medium: '500px',
+          large: '800px',
+        },
         fontFamily: {},
       },
     },

@@ -6,7 +6,8 @@ import Select from 'react-select';
 const DynamicForm = ({ 
   fields, // An array of form field configuration objects
   validationSchema, // Form validation schema
-  handleSubmit // Function to handle form submission
+  handleSubmit, // Function to handle form submission
+  closeModal=null
 }) => {
 
   // Initialize form field values based on the provided configuration
@@ -24,8 +25,16 @@ const DynamicForm = ({
     },
   });
 
+  // Function to reset the form fields to their initial values
+  const handleCancel = () => {
+    formik.resetForm(); // Reset form fields
+    if (closeModal) {
+      closeModal(); // Call the closeModal function if provided
+    }
+  };
+
   return (
-    <form onSubmit={formik.handleSubmit} className="max-w-xl mx-auto">
+    <form onSubmit={formik.handleSubmit} className="w-full">
       {fields.map((field) => (
         <div key={field.name} className="mb-4">
           {/* Label for the form field */}
@@ -125,6 +134,9 @@ const DynamicForm = ({
           )}
         </div>
       ))}
+      <button type="button" onClick={handleCancel} className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded mr-2">
+        Cancel
+      </button>
       <button type="submit" className="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700">
         Submit
       </button>
