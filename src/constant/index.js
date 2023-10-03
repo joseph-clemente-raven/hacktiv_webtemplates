@@ -63,3 +63,11 @@ export const customStyles = {
   padding: '20px',
   borderRadius: '8px',
 };
+
+export const headers = ['Name', 'Age', 'Location']; // Define table headers
+export const data = [
+  { name: 'John', age: 25, location: 'New York' },
+  { name: 'Alice', age: 30, location: 'Los Angeles' },
+  { name: 'Bob', age: 28, location: 'Chicago' },
+  // Add more data as needed
+];

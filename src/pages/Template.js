@@ -1,13 +1,16 @@
 import React, { useState } from 'react'
-import { validationSchema, fields, customStyles } from '../constant';
+import { validationSchema, fields, customStyles, headers, data } from '../constant';
 import { DynamicForm } from '../components/Forms';
 import { DynamicModal } from '../components/Modals';
+import { DynamicTable } from '../components/Tables';
 
 export default function Template() {
     
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isModalOpenWithoutButton, setIsModalOpenWithoutButton] = useState(false);
   const [modalSize, setModalSize] = useState('small')
+  const [keyword, setKeyword] = useState('')
+  const [pageSize, setPageSize] = useState(10)
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -88,6 +91,19 @@ export default function Template() {
                     <p className='text-2xl font-bold'>Example Form Modal</p>
                     <DynamicForm fields={fields} closeModal={closeModalWithoutButton} validationSchema={validationSchema} handleSubmit={(e) => alert(JSON.stringify(e))}/>
                 </DynamicModal>
+            </div>
+            <div>
+                <p className='text-2xl font-bold'>Example Table</p>
+                <DynamicTable 
+                    headers={headers} 
+                    data={data} 
+                    search={true} 
+                    searchTerm={keyword} 
+                    setSearchTerm={setKeyword} 
+                    handleCreate={() => alert('create button clicked')}
+                    pageSize={pageSize}
+                    setPageSize={setPageSize}
+                />
             </div>
         </div>
     </div>
