@@ -125,7 +125,8 @@ const DynamicTable = ({
                             index === 0 ? 'sm:w-1/3' : 'sm:w-1/4'
                             }`}
                         >
-                            {item[header.toLowerCase()]}
+                            {/* {item[header.toLowerCase()]} */}
+                            {item[header]}
                         </td>
                         ))}
                     </tr>

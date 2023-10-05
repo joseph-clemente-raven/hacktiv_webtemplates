@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from 'uuid';
+
 export function getName(firstName, middleName, lastName) {
     return  (firstName && lastName) ? `${firstName} ${middleName} ${lastName}`: '';
   }
@@ -25,6 +27,10 @@ export function getStringToDate(date){
 export function emailPatternValidation(){
   // eslint-disable-next-line no-useless-escape
   return "^([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4})?$"
+}
+
+export function createGUID(){
+  return uuidv4();
 }
 
 export function phonePatternValidation(){

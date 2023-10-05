@@ -1,0 +1,74 @@
+[
+    {
+        "id":"1",
+        "Name": "John",
+        "Age" : 20,
+        "Location" : "New York"
+    },
+    {
+        "id":"2",
+        "Name": "Kevin",
+        "Age" : 21,
+        "Location" : "New York"
+    },
+    {
+        "id":"3",
+        "Name": "Darly",
+        "Age" : 24,
+        "Location" : "Los Angeles"
+    },
+    {
+        "id":"4",
+        "Name": "Joana",
+        "Age" : 24,
+        "Location" : "California"
+    },
+    {
+        "id":"5",
+        "Name": "Karen",
+        "Age" : 22,
+        "Location" : "San Francisco"
+    },
+    {
+        "id":"6",
+        "Name": "Denver",
+        "Age" : 23,
+        "Location" : "California"
+    },
+    {
+        "id":"7",
+        "Name": "Melissa",
+        "Age" : 22,
+        "Location" : "Los Angeles"
+    },
+    {
+        "id":"8",
+        "Name": "Richard",
+        "Age" : 26,
+        "Location" : "New York"
+    },
+    {
+        "id":"9",
+        "Name": "Luke",
+        "Age" : 21,
+        "Location" : "Houston"
+    },
+    {
+        "id":"10",
+        "Name": "Zack",
+        "Age" : 25,
+        "Location" : "California"
+    },
+    {
+        "id":"11",
+        "Name": "Tony",
+        "Age" : 24,
+        "Location" : "San Francisco"
+    },
+    {
+        "id":"12",
+        "Name": "Aliana",
+        "Age" : 22,
+        "Location" : "California"
+    }
+]

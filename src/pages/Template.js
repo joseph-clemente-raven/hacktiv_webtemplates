@@ -3,9 +3,10 @@ import { validationSchema, fields, customStyles, headers, data } from '../consta
 import { DynamicForm } from '../components/Forms';
 import { DynamicModal } from '../components/Modals';
 import { DynamicTable } from '../components/Tables';
+import Accounts from '../LocalDB/Accounts.json'
+import { createGUID } from '../helper/helper';
 
 export default function Template() {
-    
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isModalOpenWithoutButton, setIsModalOpenWithoutButton] = useState(false);
   const [modalSize, setModalSize] = useState('small')
@@ -96,7 +97,7 @@ export default function Template() {
                 <p className='text-2xl font-bold'>Example Table</p>
                 <DynamicTable 
                     headers={headers} 
-                    data={data} 
+                    data={Accounts} 
                     search={true} 
                     searchTerm={keyword} 
                     setSearchTerm={setKeyword} 
